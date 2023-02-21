@@ -1,4 +1,4 @@
-class A4{
+class A3{
     public int attr1=1;
     protected int attr2=2;
     private int attr3=3;
@@ -18,7 +18,7 @@ class A4{
     
     
 }
-class B4 extends A4{
+class B3 extends A3{
     public int attr4=4;
     protected int attr5=5;
     private int attr6=6;
@@ -38,7 +38,7 @@ class B4 extends A4{
    
 }
 
-class C4 extends B4{
+class C3 extends A3{
     public int attr7=7;
     protected int attr8=8;
     private int attr9=9;
@@ -56,10 +56,31 @@ class C4 extends B4{
         System.out.println("This is method9 of Class C and"+attr9);
     }
 } 
-public class Multilevelinheritance{
-    public static void main(String []args){
 
-        C4 obj1=new C4();
+class D3 extends C3{
+    public int attr10=10;
+    protected int attr11=11;
+    private int attr12=12;
+    
+    public void method10()
+    {
+        System.out.println("This is method10 of Class D and"+attr10);
+    }
+    protected void method11()
+    {
+        System.out.println("This is method11 of Class D and"+attr11);
+    }
+     void method12()
+    {
+        System.out.println("This is method12 of Class D and"+attr12);
+    }
+
+}
+
+public class Hybridinheritance{
+    public static void main(String []args){
+        B3 obj1=new B3();
+        D3 obj2=new D3();
         System.out.println("\n\t\tUsing the Class B\n");
         obj1.method1();
         obj1.method2();      
@@ -67,8 +88,16 @@ public class Multilevelinheritance{
         obj1.method4();
         obj1.method5();
         obj1.method6();
-        obj1.method7();
-        obj1.method8();
-        obj1.method9();
+        System.out.println("\n\t\tUsing the Class D\n");
+        obj2.method1();
+        obj2.method2();      
+        obj2.method3();
+        obj2.method7();
+        obj2.method8();
+        obj2.method9();
+        obj2.method10();
+        obj2.method11();      
+        obj2.method12();
+
     }
 }
