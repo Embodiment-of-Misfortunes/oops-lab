@@ -1,4 +1,4 @@
-//simple inheritance example
+//single inheritance example
 class Animal2{
     private String name;
     private int age;
